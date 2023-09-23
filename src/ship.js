@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/prefer-default-export
 export const Ship = (lengthNum) => {
     const shipLength = lengthNum;
     let hitNum = 0;

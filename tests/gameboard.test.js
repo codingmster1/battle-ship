@@ -1,5 +1,5 @@
 import { Gameboard } from "../src/gameboard";
-import { Ship } from '../src/ship';
+
 
 test('Place a single-space ship at a specified square on gameboard', () => {
     const game = Gameboard();

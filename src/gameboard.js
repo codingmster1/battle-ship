@@ -1,6 +1,7 @@
-import { Ship } from "./ship";
-import { randomInteger } from "./player";
+import { Ship } from './ship';
+import { randomInteger } from './player';
 
+// eslint-disable-next-line consistent-return
 export function findIndex(arr, target) {
     for (let i = 0; i < arr.length; i += 1) {
         if (arr[i][0] === target[0] && arr[i][1] === target[1]) {
@@ -12,18 +13,17 @@ export function findIndex(arr, target) {
 // Return random x or y position
 function randomPosition() {
     const randomInt = randomInteger(0, 1);
-    if (randomInt === 0) return "x";
-    return "y";
+    if (randomInt === 0) return 'x';
+    return 'y';
 }
 
 // Return random coordinates based on random position & specified ship length
 function randomCoordRandomPos(position, shipLength) {
     let randomX;
     let randomY;
-    if (position === "x") {
+    if (position === 'x') {
         randomX = randomInteger(0, 9);
         randomY = randomInteger(0, (9 - (shipLength - 1)));
-
     } else {
         randomX = randomInteger((0 + (shipLength - 1)), 9);
         randomY = randomInteger(0, 9);
@@ -33,7 +33,6 @@ function randomCoordRandomPos(position, shipLength) {
 }
 
 export const Gameboard = () => {
-
     // Build array of coordinates
     const buildBoard = () => {
         const board = [];
@@ -43,7 +42,7 @@ export const Gameboard = () => {
             }
         }
         return board;
-    }
+    };
 
     // Build array w/ info object for each gameboard square
     const buildObjList = (arr) => {
@@ -51,11 +50,11 @@ export const Gameboard = () => {
         for (let i = 0; i < arr.length; i += 1) {
             newArr[i] = {
                 ship: null,
-                attacked: null
-            }
+                attacked: null,
+            };
         }
         return newArr;
-    }
+    };
 
     const board = buildBoard();
     const objList = buildObjList(board);
@@ -88,7 +87,7 @@ export const Gameboard = () => {
         checkAbove(index);
         checkBelow(index);
 
-        if (position === "x") {
+        if (position === 'x') {
             for (let i = 1; i < shipLength; i += 1) {
                 if (objList[index + i].ship != null) allClear = false;
                 checkRight(index + i);
@@ -106,7 +105,7 @@ export const Gameboard = () => {
             }
         }
         return allClear;
-    }
+    };
 
     // Place ship at specific coordinates
     const placeShip = (coord, shipLength, position) => {
@@ -115,7 +114,7 @@ export const Gameboard = () => {
         const index = findIndex(board, target);
         objList[index].ship = newShip;
 
-        if (position === "x") {
+        if (position === 'x') {
             for (let i = 1; i < shipLength; i += 1) {
                 objList[index + i].ship = newShip;
             }
@@ -126,11 +125,10 @@ export const Gameboard = () => {
                 j += 10;
             }
         }
-    }
+    };
 
     // Place all ships randomly on gameboard
     const placeRandomShips = () => {
-
         function placePresets(shipLength) {
             const shipPos = randomPosition();
             const shipCoord = randomCoordRandomPos(shipPos, shipLength);
@@ -148,7 +146,7 @@ export const Gameboard = () => {
         placePresets(3);
         placePresets(3);
         placePresets(2);
-    }
+    };
 
     // Check if a square contains a ship
     const hasShip = (coord) => {
@@ -158,7 +156,7 @@ export const Gameboard = () => {
             return true;
         }
         return false;
-    }
+    };
 
     // Increase hit number of ship if contained in attacked square
     const receiveAttack = (index) => {
@@ -168,7 +166,7 @@ export const Gameboard = () => {
         } else {
             objList[index].attacked = true;
         }
-    }
+    };
 
     // Return true if all ships on board have been sunk
     const allShipsSunk = () => {
@@ -181,8 +179,9 @@ export const Gameboard = () => {
             }
         }
         return result;
-    }
+    };
 
-    return { board, objList, placeShip, placeRandomShips, hasShip, receiveAttack, allShipsSunk }
-
-}
+    return {
+        board, objList, placeShip, placeRandomShips, hasShip, receiveAttack, allShipsSunk,
+    };
+};
