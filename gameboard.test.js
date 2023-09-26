@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-const { Ship } = require("./ship");
+
 const { gameboardFactory } = require("./gameboard");
 
 test("placing a ship on the board updates the board correctly", () => {
