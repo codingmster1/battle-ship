@@ -1,4 +1,5 @@
 
+const { test } = require("@jest/globals");
 const { Ship } = require("./ship");
 
 test("Test creating a new Ship object with a length of 3", () => {

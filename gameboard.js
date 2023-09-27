@@ -8,14 +8,14 @@ const gameboardFactory = () => {
 
     const ships = [];
 
-    // eslint-disable-next-line no-shadow
+
     const isValidPosition = (board, row, col, size, isVertical) => {
 
         if (isVertical) {
             if (row + size > board.length) {
                 return false;
             }
-            // eslint-disable-next-line no-plusplus
+
             for (let i = row; i < row + size; i++) {
                 if (board[i][col] !== null) {
                     return false;
@@ -25,7 +25,7 @@ const gameboardFactory = () => {
             if (col + size > board.length) {
                 return false;
             }
-            // eslint-disable-next-line no-plusplus
+
             for (let j = col; j < col + size; j++) {
                 if (board[row][j] !== null) {
                     return false;
@@ -44,12 +44,12 @@ const gameboardFactory = () => {
 
 
             // If isVertical is true it place the ship in a vertical consecutive way
-            // eslint-disable-next-line no-plusplus
+
             for (let i = row; i < row + size; i++) {
                 board[i][col] = newShip;
             }
         } else {
-            // eslint-disable-next-line no-plusplus
+
             for (let j = col; j < col + size; j++) {
                 // If isVertical is false it place the ship in a horizontal consecutive way
                 board[row][j] = newShip;
@@ -65,7 +65,7 @@ const gameboardFactory = () => {
             missedShots.push({ row, col });
         } else {
 
-            // eslint-disable-next-line no-plusplus
+
             for (let i = 0; i < ships.length; i++) {
                 const ship = ships[i];
                 if (board[row][col] === ship) {
@@ -78,7 +78,7 @@ const gameboardFactory = () => {
     }
 
     function allShipSunk() {
-        // eslint-disable-next-line no-plusplus
+
         for (let i = 0; i < ships.length; i++) {
             if (!ships[i].isSunk()) {
                 return false;

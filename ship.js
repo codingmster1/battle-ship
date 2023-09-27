@@ -1,4 +1,4 @@
-// eslint-disable-next-line no-use-before-define
+
 module.exports = { Ship };
 
 
@@ -7,7 +7,7 @@ function Ship(length) {
     const isVertical = true;
 
     function hit() {   // this will working if I will not allow the player to attack a position already attacked
-        // eslint-disable-next-line no-plusplus
+
         for (let i = 0; i < hits.length; i++) {
             if (!hits[i]) {
                 hits[i] = true
@@ -18,7 +18,7 @@ function Ship(length) {
 
 
     function isSunk() {
-        // eslint-disable-next-line no-shadow
+
         return hits.every(hit => hit === true);
     }
 

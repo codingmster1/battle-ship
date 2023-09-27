@@ -2,7 +2,7 @@
 const { gameboardFactory } = require("./gameboard");
 
 test("placing a ship on the board updates the board correctly", () => {
-    // eslint-disable-next-line global-require, no-shadow
+
     const { gameboardFactory } = require("./gameboard");
     const gameboard = gameboardFactory();
 
