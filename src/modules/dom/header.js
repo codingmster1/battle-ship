@@ -2,7 +2,7 @@ function createHeaderBox() {
     const header = document.createElement('header');
     header.id = 'header';
     const title = document.createElement('h1');
-    title.textContent = 'battleship.';
+    title.textContent = 'Battleship';
 
     const newGameButton = document.createElement('button');
     newGameButton.classList.add('new-game-button');
