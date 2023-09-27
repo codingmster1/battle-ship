@@ -3,10 +3,10 @@ function createFooter() {
     const footerBox = document.createElement("footer");
     const authorName = document.createElement("p");
     authorName.classList.add("footer-author");
-    authorName.textContent = "Carl Madsen 2022";
+    authorName.textContent = "Jeff Doyle 2023";
     const footerLink = document.createElement("a");
     footerLink.id = "footer-link";
-    footerLink.setAttribute("href", "https://github.com/elsaepo/odin-battleship");
+    footerLink.setAttribute("href", "https://github.com/codingmster1/battle-ship");
     const gitHubLogo = document.createElement("i");
     gitHubLogo.classList.add("fa-brands", "fa-github", "fa-xl", "footer-logo");
     footerLink.appendChild(gitHubLogo);
