@@ -8,12 +8,12 @@ function Player(playerName, playerNumber) {
     const gameboard = Gameboard();
     const battleBot = aiLogic();
     function attack(enemy, row, col) {
-        // If the attacking player is AI, we use the aiLogic module to get the attack coordinates
+
         if (this.isAI) {
             if (this.battleBot.availableAttacks.length === 0) return 'No squares to attack';
             [row, col] = this.battleBot.attack(enemy);
         }
-        // Get the result of the attack and update the aiLogic with it
+
         const result = enemy.gameboard.receiveAttack(row, col);
         if (this.isAI) {
             if (result[0] === 'hit') {
