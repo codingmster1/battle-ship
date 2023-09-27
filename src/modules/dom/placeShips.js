@@ -45,7 +45,7 @@ function drawSetupShips() {
     setupShipsOptions.classList.add('setup-ships-options');
     const startGame = document.createElement('button');
     startGame.classList.add('setup-button-start');
-    startGame.textContent = 'TO BATTLE!';
+    startGame.textContent = 'BATTLE!';
     const randomShips = document.createElement('button');
     randomShips.classList.add('setup-button-random');
     randomShips.textContent = 'randomize';

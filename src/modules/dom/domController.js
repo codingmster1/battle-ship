@@ -165,12 +165,12 @@ function drawVictoryContainer(winner) {
     const loserText = document.createElement('p');
     if (winner.isAI) {
         victoryTitle.classList.add('victory-defeat');
-        victoryTitle.textContent = 'TOTAL DEFEAT';
+        victoryTitle.textContent = 'DEFEAT';
         winnerText.textContent = `${winner.name} has claimed domination!`;
         loserText.textContent = `Your fleet is sunk.`
     } else {
         victoryTitle.classList.add('victory-victory');
-        victoryTitle.textContent = 'TOTAL VICTORY';
+        victoryTitle.textContent = 'VICTORY';
         winnerText.textContent = `You have claimed domination!`;
         loserText.textContent = `${loser.name}'s fleet is sunk.`
     }
