@@ -1,6 +1,6 @@
 import Game from '../game';
 import aiLogic from '../aiLogic';
-// import getAdjacentCell from '../aiLogic';
+
 
 let game;
 let player1;

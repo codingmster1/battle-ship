@@ -59,16 +59,14 @@ function drawSetup(player) {
     gameContainer.append(setupBoard, setupShips);
 }
 
-// If the game container height if over 500px, we can see the flexbox is wrapped
-// We then adjust the header to match the width of the game boards - instead of being 100% wide
-// I'm sure there are better solutions.
+
 const gameSizeObserver = new ResizeObserver(entry => {
     if (entry[0].contentRect.height > 500) header.style.width = '320px';
     else header.style.width = `${entry[0].contentRect.width}px`;
 })
 gameSizeObserver.observe(gameContainer);
 
-// Hold the information of the player's board - name, board and ships left
+
 function drawBoardContainer(player) {
     const boardContainer = document.createElement('div');
     boardContainer.classList.add('board-container');
@@ -80,7 +78,7 @@ function drawBoardContainer(player) {
     return boardContainer;
 }
 
-// Draw a grid of cells with data attributes for their locations
+
 function drawBoard(player) {
     const board = document.createElement('div');
     board.classList.add('board');
@@ -92,15 +90,14 @@ function drawBoard(player) {
             cell.dataset.row = row;
             cell.dataset.col = col;
             board.appendChild(cell);
-            // Add event attack event listeneres only for AI's cells
+
             if (player && player.isAI) cell.addEventListener('click', listenForAttack, false);
         }
     }
     return board;
 }
 
-// Upon clicking a cell, attack the relevant square, if allowed
-// Pass information from the attack to styleAttackedCell function
+
 function listenForAttack(event) {
     const cell = event.target
     const defendingPlayerNumber = cell.dataset.player;
@@ -116,7 +113,7 @@ function listenForAttack(event) {
     nextTurn();
 }
 
-// Call an attack for the AI
+
 function callAIAttack(ai) {
     if (ai !== game.currentPlayer) return;
     const defendingPlayerNumber = game.defendingPlayer === game.player1 ? '1' : '2';
@@ -126,8 +123,7 @@ function callAIAttack(ai) {
     nextTurn();
 }
 
-// Style attacked cell based on a hit or miss
-// If the ship is sunk, style each of the ship's cells with the .cell-sunk class
+
 function styleAttackedCell(cell, defendingPlayerNumber, result, ship) {
     if (result === 'hit') {
         cell.classList.add('cell-hit');
@@ -141,7 +137,7 @@ function styleAttackedCell(cell, defendingPlayerNumber, result, ship) {
     if (result === 'miss') cell.classList.add('cell-miss');
 }
 
-// Handle end-of-turn events
+
 function nextTurn() {
     const winner = game.checkGameOver();
     if (winner) {
@@ -159,7 +155,7 @@ function endGame(winner) {
     gameContainer.appendChild(drawVictoryContainer(winner));
 }
 
-// Popup victory container
+
 function drawVictoryContainer(winner) {
     const loser = game.checkGameOver() === game.player1 ? game.player2 : game.player1;
     const victoryContainer = document.createElement('div');
@@ -182,7 +178,7 @@ function drawVictoryContainer(winner) {
     return victoryContainer;
 }
 
-// Draw the ships to the player's on-screen board so they can see their fleet
+
 function populateBoard(player, board) {
     for (let row = 0; row < 10; row++) {
         for (let col = 0; col < 10; col++) {
