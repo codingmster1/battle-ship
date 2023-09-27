@@ -1,1 +1,2 @@
-console.log("hey")
+import './styles.css';
+import './modules/dom/domController'
