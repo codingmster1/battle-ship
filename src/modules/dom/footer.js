@@ -1,4 +1,4 @@
-// Footer link and light/dark mode functionality
+
 function createFooter() {
     const footerBox = document.createElement("footer");
     const authorName = document.createElement("p");
