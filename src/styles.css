@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@700&family=Della+Respira&family=Handjet:wght@500;900&family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Mooli&family=Pacifico&family=Pangolin&family=Playfair:wght@300&family=Roboto:ital,wght@0,400;0,700;1,300&family=VT323&display=swap');
+
 :root {
     --header-height: 100px;
     --board-size: 318px;
@@ -46,7 +48,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Mooli', sans-serif;
     color: var(--text-color-main);
 }
 
@@ -79,7 +81,7 @@ header button {
 }
 
 button {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Mooli', sans-serif;
     color: var(--text-color-main);
     display: flex;
     justify-content: center;
@@ -258,7 +260,7 @@ button:active {
     background-color: var(--hit-color);
 }
 
-/* Only allow visible hover for opposing player's board */
+
 @media (hover: hover) {
     .cell:not([data-player='1']):not(.cell-hit):not(.cell-miss):hover {
         background-color: var(--cell-hover-color);
@@ -326,7 +328,7 @@ button:active {
     color: var(--sunk-color);
 }
 
-/* Footer */
+
 footer {
     display: flex;
     align-items: center;
