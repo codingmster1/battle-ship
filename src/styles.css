@@ -4,7 +4,7 @@
     --header-height: 100px;
     --board-size: 318px;
     --cell-size: 30px;
-    background: url('./images/cockpitanime.gif');
+    background: url('./asset/cockpitanime.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -29,7 +29,7 @@
 :root.dark {
     /* --background-color: rgb(30, 30, 30);
     --background-color-transparent: rgba(30, 30, 30, 0.7);*/
-    background: url('./images/darktheme.gif');
+    background: url('./asset/darktheme.gif');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
