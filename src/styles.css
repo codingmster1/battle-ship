@@ -48,7 +48,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
-    font-family: 'Mooli', sans-serif;
     color: var(--text-color-main);
 }
 
@@ -64,6 +63,11 @@ body {
 
 h3 {
     margin: 0;
+    font-family: 'Black Ops One', cursive;
+}
+
+h1 {
+    font-family: 'Black Ops One', cursive;
 }
 
 /* Header */
@@ -130,6 +134,7 @@ button:active {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Pangolin', cursive;
 }
 
 .setup-ship {
@@ -144,6 +149,7 @@ button:active {
 .setup-ship p {
     margin: 0;
     display: inline-block;
+    font-family: 'Pangolin', cursive;
 }
 
 .setup-ship-box {
