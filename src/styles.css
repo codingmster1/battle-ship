@@ -4,26 +4,35 @@
     --header-height: 100px;
     --board-size: 318px;
     --cell-size: 30px;
-
-    --background-color: rgb(240, 240, 240);
-    --background-color-transparent: rgba(240, 240, 240, 0.7);
+    background: url('./images/cockpitanime.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /*--background-color: rgb(240, 240, 240);
+    --background-color-transparent: rgba(240, 240, 240, 0.7);*/
     --cell-color: rgb(230, 230, 230);
     --cell-hover-color: rgb(200, 200, 200);
     --cell-border-color: rgb(70, 70, 70);
     --ship-color: rgb(150, 150, 150);
-    --hit-color: rgb(206, 169, 134);
+    --hit-color: rgb(155, 99, 61);
     --miss-color: rgb(161, 216, 161);
     --sunk-color: rgb(206, 134, 134);
-    --text-color-main: rgb(40, 40, 40);
+    --text-color-main: rgb(230, 230, 230);
+    --footer-color: rgb(230, 230, 230);
     --text-color-grey: rgb(100, 100, 100);
-    --button-color: rgb(210, 210, 210);
+    --button-color: rgb(50, 50, 50);
+    --battle-button: rgb(155, 61, 61);
     --button-color-hover: rgb(230, 230, 230);
     --button-color-active: grey;
 }
 
 :root.dark {
-    --background-color: rgb(30, 30, 30);
-    --background-color-transparent: rgba(30, 30, 30, 0.7);
+    /* --background-color: rgb(30, 30, 30);
+    --background-color-transparent: rgba(30, 30, 30, 0.7);*/
+    background: url('./images/darktheme.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     --cell-color: rgb(40, 40, 40);
     --cell-hover-color: rgb(90, 90, 90);
     --cell-border-color: rgb(220, 220, 220);
@@ -351,11 +360,14 @@ footer {
 footer p {
     font-weight: 600;
     font-size: 1.1rem;
+    color: var(--text-color-main);
+
 }
 
 footer i {
-    color: var(--text-color-main);
+
     transition: transform 0.1s ease;
+    color: var(--text-color-main);
 }
 
 @media (hover: hover) {
@@ -373,6 +385,13 @@ footer i {
         --header-height: 80px;
         --board-size: 278px;
         --cell-size: 26px;
+    }
+
+    body {
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     header button {
