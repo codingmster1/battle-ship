@@ -2,7 +2,7 @@ import Gameboard from './gameboard';
 import aiLogic from './aiLogic';
 
 function Player(playerName, playerNumber) {
-    let name = typeof playerName === 'string' ? playerName : 'battleBot';
+    let name = typeof playerName === 'string' ? playerName : 'Enemy';
     const number = playerNumber;
     const isAI = typeof playerName !== 'string' ? true : false;
     const gameboard = Gameboard();
