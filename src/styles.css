@@ -380,20 +380,24 @@ footer i {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
     :root {
         --header-height: 80px;
         --board-size: 278px;
         --cell-size: 26px;
-    }
-
-    body {
         background-size: cover;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
-
     }
+
+    :root.dark {
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
 
     header button {
         height: 28px;
