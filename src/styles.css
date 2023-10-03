@@ -17,12 +17,12 @@
     --hit-color: rgb(155, 99, 61);
     --miss-color: rgb(161, 216, 161);
     --sunk-color: rgb(206, 134, 134);
-    --text-color-main: rgb(230, 230, 230);
+    --text-color-main: rgb(241, 233, 233);
     --footer-color: rgb(230, 230, 230);
     --text-color-grey: rgb(100, 100, 100);
     --button-color: rgb(50, 50, 50);
     --battle-button: rgb(155, 61, 61);
-    --button-color-hover: rgb(230, 230, 230);
+    --button-color-hover: rgb(109, 156, 156);
     --button-color-active: grey;
 }
 
